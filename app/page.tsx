@@ -36,15 +36,24 @@ export default function Home() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt }),
+        signal: AbortSignal.timeout(30000)
       });
+      
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to generate image');
+      }
+      
       const data = await response.json();
       if (data.imageUrl) {
         setGeneratedImageUrl(data.imageUrl);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error generating image:", error);
+      alert(error.message || "Failed to generate image. Please try again.");
+    } finally {
+      setImageLoading(false);
     }
-    setImageLoading(false);
   };
 
   return (
