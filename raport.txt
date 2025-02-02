@@ -1,0 +1,17 @@
+- modelul de AI folosit este GPT-4
+- uneori ideile pot fi vagi sau repetitive
+- am ales ca pentru aceasta aplicatie sa folosesc GPT-4 deoarece este un model foarte popular si multa lume se teme ca AI-ul va lua locul programatorilor. Eu unul consider ca acest lucru nu este posibil, cel putin nu in curand.
+- din experienta proprie, am observat ca GPT-4 este un model de AI puternic pentru task-urile de zi cu zi (structurare proiecte, informare, sintetizare informatii, etc), dar legat de coding, odata ce codul este mai complex, este impartit in mai multe fisiere (de exemplu clase), acesta poate sa nu fie exact modelul de AI potrivit.
+
+CONS:
+Necesita un API_KEY, dar acesta nu a specificat de unde se poate obtine acest API_KEY si totodata mi-a spus sa adaug acest key in .env.local, care nu exista - a trebuit sa-l creez eu.
+PATH-ul pe care il specifica acesta este unul gresit in next.js 15. PATH-ul pe care il foloseste chat gpt cel putin pentru next.js este de la versiunea 13. Cu toate acestea, codul pentru API este mai actualizat. - am create eu PATH-ul corect pentru fisiere
+Cu toate ca in API folosesc pachetul openai, acesta nu mi-a spus ca trebuie sa instalez vreun alt pachet.
+UI - odata cu crearea unei aplicatii in next.js, orice fisier care utilizeaza react hooks, trebuie sa contina "use client" la inceputul fisierului. - am adaugat eu
+UI - culorile, din punct de vedere al contrastului, nu sunt foarte bine alese.
+API - problema lui a fost faptul ca chiar si pentru backend, folosea pachete din next.js 13
+max_tokens: 200 din API facea ca request-ul sa dea eroare. Dupa analiza documentatiei OpenAI am sters acea linie.
+
+PROS:
+Per ansamblu, chat-gpt este un model de inteligenta artificiala decent pentru task-urile pe care le-am dat si cel mai probabil pentru coding zilnic. Cu toate acestea, odata ce codul este mai complex, este impartit in mai multe fisiere (de exemplu clase), acesta poate sa nu fie exact modelul de AI potrivit.
+- memoria
