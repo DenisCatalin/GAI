@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔹 Capacitățile și Limitările Generative AI (DALL·E)
 
-## Getting Started
+## 🔥 Capacități
 
-First, run the development server:
+- **Generare rapidă de imagini** pe baza unui text descriptiv.
+- **Personalizare a promptului** pentru a controla stilul, compoziția și detaliile vizuale.
+- **Utilizare în aplicații web** pentru crearea de conținut dinamic.
+- **Calitate vizuală ridicată** – poate produce imagini detaliate și coerente.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ⚠️ Limitări
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Bias-ul datasetului** – AI-ul poate favoriza anumite stiluri vizuale sau teme, nefiind întotdeauna imparțial.
+- **Inabilitatea de a reda text** în mod corect în imagini (ex. logo-uri, bannere publicitare).
+- **Imagini fotorealiste imperfecte** – pot apărea distorsiuni în detalii fine.
+- **Necesitatea optimizării promptului** – un prompt vag poate duce la rezultate nesatisfăcătoare.
+- **Restricții etice** – OpenAI aplică filtre pentru conținut ofensator, violent sau explicit.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📌 Exemple de Prompturi
 
-## Learn More
+### Prompt inițial (slab):
+> "A futuristic city with flying cars."
 
-To learn more about Next.js, take a look at the following resources:
+**Rezultat:** Imagine generată fără detalii semnificative, culori generice, fără un stil artistic clar.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🔥 Prompt îmbunătățit:
+> "A highly detailed cyberpunk city at night, illuminated with neon lights, featuring flying cars with glowing trails, a futuristic skyline with holographic billboards, and rain reflecting the vibrant colors on the streets. Digital painting, 4K, ultra-realistic."
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🔹 Etică și Verificarea Credibilității
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Verificare vizuală:** Imaginile generate sunt analizate pentru posibile erori sau distorsiuni.
+- **Filtre de conținut:** DALL·E nu permite generarea de imagini ofensatoare sau periculoase.
+- **Transparență:** Menționăm că imaginile sunt generate de AI pentru a evita dezinformarea.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 📌 Structura de comunicare
+Utilizator → Prompt → API OpenAI → Imagine generată
+
+
+**Structură interactivă:** Utilizatorul vede instantaneu rezultatul și poate modifica promptul pentru ajustări.
+
+---
+
+## 🔹 Generarea de Idei cu AI (ChatGPT & DALL·E)
+
+Pe lângă generarea efectivă a imaginilor, AI poate fi folosit și pentru brainstorming-ul prompturilor, ajutând utilizatorii să obțină rezultate mai bune.
+
+### 📌 Exemplu de utilizare a AI pentru generarea de idei de imagini
+
+În loc să cerem utilizatorului să vină cu o idee complet formată, am putea adăuga o funcție unde **ChatGPT** propune idei pentru prompturi pe baza unui cuvânt cheie sau a unei tematici.
+
+### 👉 Flux posibil în aplicație:
+1. Utilizatorul introduce un concept general (ex: „viitorul transportului”).
+2. AI-ul sugerează prompturi detaliate bazate pe acest concept.
+3. Utilizatorul alege un prompt și generează imaginea în DALL·E.
+
+---
+
+## 📌 Beneficii ale Generării de Idei cu AI
+
+- ✔️ Ajută utilizatorii să creeze prompturi mai detaliate și creative.
+- ✔️ Reduce bariera creativă – unii utilizatori nu știu exact ce să descrie.
+- ✔️ Optimizează rezultatele DALL·E – prompturi mai clare duc la imagini mai reușite.
+- ✔️ Demonstrează capacitatea AI de a îmbunătăți procesul creativ.
+
+---
+
+## 📌 Limitările Generării de Idei cu AI
+
+- ⚠️ Poate oferi idei **generice** – fără optimizare, AI-ul poate repeta teme comune.
+- ⚠️ Nu înțelege întotdeauna **contextul exact** dorit de utilizator.
+- ⚠️ **Necesită ajustare manuală** – unele idei trebuie rafinate înainte de utilizare.
+
+---
+## Pentru DALL·E:
+- OpenAI. (2025). DALL·E 2 [Generative AI]. https://openai.com/dall-e
+
+## Pentru ChatGPT:
+- OpenAI. (2025). ChatGPT [Generative AI]. https://openai.com/chatgpt
