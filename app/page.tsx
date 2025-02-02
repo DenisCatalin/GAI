@@ -48,14 +48,14 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-2xl font-bold mb-4 text-slate-500">AI Multimedia Project Generator</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-2">
+      <h1 className="text-2xl font-bold mb-4 text-slate-500 text-center">AI Multimedia Project Generator</h1>
       <input
         type="text"
         value={topic}
         onChange={(e) => setTopic(e.target.value)}
         placeholder="Enter a topic..."
-        className="w-1/3 p-2 border border-gray-300 rounded-md text-slate-500"
+        className="w-2/3 p-2 border border-gray-300 rounded-md text-slate-500 lg:w-1/3"
       />
       <button
         onClick={generateIdeas}
@@ -86,7 +86,7 @@ export default function Home() {
               height={250}
             />
           )}
-          <div className="mt-6 w-1/2 bg-white p-4 shadow-md rounded-md overflow-auto max-h-96">
+          <div className="mt-6 w-full bg-white p-4 shadow-md rounded-md overflow-auto max-h-96 lg:w-1/2">
             <h2 className="text-lg font-semibold text-slate-500">Generated Ideas:</h2>
             <ul className="text-slate-500">
               {ideas.map((idea, index) => (

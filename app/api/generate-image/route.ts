@@ -19,6 +19,7 @@ export async function POST(req: NextRequest) {
       quality: "standard",
     });
 
+
     if (!response.data?.[0]?.url) {
       return NextResponse.json({ error: "Failed to generate image" }, { status: 500 });
     }
