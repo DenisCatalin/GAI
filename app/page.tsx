@@ -48,9 +48,10 @@ export default function Home() {
       if (data.imageUrl) {
         setGeneratedImageUrl(data.imageUrl);
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Error generating image:", error);
-      alert(error.message || "Failed to generate image. Please try again.");
+      const errorMessage = error instanceof Error ? error.message : "Failed to generate image. Please try again.";
+      alert(errorMessage);
     } finally {
       setImageLoading(false);
     }
